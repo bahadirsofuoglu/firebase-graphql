@@ -1,7 +1,6 @@
-const firebase = require('../firebase/dbConfig')
-const db = firebase.firestore()
+const db = require('../db')
 
-exports.addTask = exports.addTask = async (_, { firstname, lastname }) => {
+exports.addTask = async (_, { firstname, lastname }) => {
   const newPost = {
     firstname: firstname,
     lastname: lastname

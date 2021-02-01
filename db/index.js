@@ -1,10 +1,9 @@
 const dotenv = require('dotenv')
-const firebase = require('firebase')
+const Firebase = require('firebase')
 dotenv.config()
 const {
   API_KEY,
   AUTH_DOMAIN,
-  DATABASE_URL,
   PROJECT_ID,
   STORAGE_BUCKET,
   MESSAGING_SENDER_ID,
@@ -21,6 +20,6 @@ const firebaseConfig = {
   appId: APP_ID,
   measurementId: MEASUREMENT_ID
 }
-const db = firebase.initializeApp(firebaseConfig)
+const firebase = Firebase.initializeApp(firebaseConfig)
 
-module.exports = db
+module.exports = firebase.firestore()
