@@ -17,4 +17,10 @@ type Mutation {
     firstname: String!
     lastname: String!
   ): Post!
+  updatePost(
+    id: ID!
+    firstname: String!
+    lastname: String!
+  ): Post!
+  
 }
