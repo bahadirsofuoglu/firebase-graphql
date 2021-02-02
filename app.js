@@ -4,9 +4,9 @@ const fs = require('fs')
 const path = require('path')
 
 // Import typeDefs and resolvers
-const filePath = path.join(__dirname, 'graphql', 'typeDefs.gql')
+const filePath = path.join(__dirname, 'schemas', 'typeDefs.gql')
 const typeDefs = fs.readFileSync(filePath, 'utf-8')
-const resolvers = require('./graphql/resolvers')
+const resolvers = require('./resolvers/task')
 
 const server = new ApolloServer({
   typeDefs,

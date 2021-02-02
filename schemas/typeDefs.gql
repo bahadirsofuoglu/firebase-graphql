@@ -1,4 +1,5 @@
 type Post {
+  id:ID!
   firstname: String!
   lastname: String!
 }
@@ -24,6 +25,6 @@ type Mutation {
   ): Post!
   deleteTask(
     id: ID!
-  ): Boolean!
+  ): Boolean
   
 }
