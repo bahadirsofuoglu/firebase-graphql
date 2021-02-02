@@ -5,8 +5,8 @@ module.exports = {
     getTask: taskController.getTask
   },
   Mutation: {
-    addPost: taskController.addTask,
-    updatePost: taskController.updateTask,
-    deletePost: taskController.deleteTask
+    addTask: taskController.addTask,
+    updateTask: taskController.updateTask,
+    deleteTask: taskController.deleteTask
   }
 }
