@@ -9,7 +9,7 @@ type PostsPage {
 }
 type Query {
 
-  getPosts: [Post]
+  getTask: [Post]
 
 }
 type Mutation {

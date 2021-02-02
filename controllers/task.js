@@ -6,17 +6,16 @@ exports.addTask = async (_, { firstname, lastname }) => {
     lastname: lastname
   }
   await db
-    .collection('students')
+    .collection('test')
     .doc()
     .set(newPost)
   return newPost
 }
-/* exports.addTask = async (req, res, next) => {
-  try {
-      const data = req.body;
-      await db.collection('students').doc().set(data);
-      res.send('Record saved successfuly');
-  } catch (error) {
-      res.status(400).send(error.message);
-  }
-} */
+
+exports.getTask = async _ => {
+  const res = await db.collection('test').get()
+  const test = []
+  res.forEach(x => test.push(x.data()))
+
+  return test
+}
