@@ -2,7 +2,7 @@ const taskController = require('../controllers/task')
 
 module.exports = {
   Query: {
-    getTask: taskController.getTask
+    tasks: taskController.getTask
   },
   Mutation: {
     addTask: taskController.addTask,

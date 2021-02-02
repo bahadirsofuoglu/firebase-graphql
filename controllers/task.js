@@ -2,10 +2,10 @@ const db = require('../db')
 
 exports.getTask = async _ => {
   const dbResponse = await db.collection('test').get()
-  const res = []
-  dbResponse.forEach(x => res.push(x.data()))
+  const tasks = []
+  dbResponse.forEach(x => tasks.push(x.data()))
 
-  return res
+  return tasks
 }
 
 exports.addTask = async (_, { firstname, lastname }) => {
@@ -17,6 +17,7 @@ exports.addTask = async (_, { firstname, lastname }) => {
     .collection('test')
     .doc()
     .set(newPost)
+
   return newPost
 }
 
@@ -37,5 +38,5 @@ exports.deleteTask = async (_, { id }) => {
     .collection('test')
     .doc(id)
     .delete()
-  //TODO: item deleted but i cant show response about delete status
+  return true
 }

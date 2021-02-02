@@ -16,6 +16,7 @@ const server = new ApolloServer({
     message: error.message.replace('Context creation failed:', '')
   })
 })
+
 server.listen().then(({ url }) => {
   console.log(`Server listening on ${url}`)
 })

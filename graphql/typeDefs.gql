@@ -9,7 +9,7 @@ type PostsPage {
 }
 type Query {
 
-  getTask: [Post]
+  tasks: [Post]
 
 }
 type Mutation {
@@ -24,6 +24,6 @@ type Mutation {
   ): Post!
   deleteTask(
     id: ID!
-  ): Post!
+  ): Boolean!
   
 }
