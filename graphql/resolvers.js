@@ -6,6 +6,7 @@ module.exports = {
   },
   Mutation: {
     addPost: taskController.addTask,
-    updatePost: taskController.updateTask
+    updatePost: taskController.updateTask,
+    deletePost: taskController.deleteTask
   }
 }

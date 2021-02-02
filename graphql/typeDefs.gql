@@ -22,5 +22,8 @@ type Mutation {
     firstname: String!
     lastname: String!
   ): Post!
+  deletePost(
+    id: ID!
+  ): Post!
   
 }

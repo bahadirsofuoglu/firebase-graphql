@@ -32,3 +32,10 @@ exports.updateTask = async (_, { firstname, lastname, id }) => {
 
   return updatePost
 }
+exports.deleteTask = async (_, { id }) => {
+  await db
+    .collection('test')
+    .doc(id)
+    .delete()
+  //TODO: item deleted but i cant show response about delete status
+}
