@@ -29,7 +29,7 @@ exports.updateWorkspace = async (_, req) => {
 
   return data
 }
-exports.deleteTask = async (_, req) => {
+exports.deleteWorkspace = async (_, req) => {
   const id = req.id
   await db
     .collection('workspaces')
