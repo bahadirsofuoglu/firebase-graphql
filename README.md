@@ -1,9 +1,9 @@
 # firebase-graphql
 This project answers the following questions. 
 
-- [How are resolver, typedefs filed ?]
-- [How to use firestore with node.js?]
-- [How to work with relation data in graphql ?]
+- How are resolver, typedefs filed ?
+- How to use firestore with node.js?
+- How to work with relation data in graphql ?
 
 #### Dotenv for firebase
 ```sh
