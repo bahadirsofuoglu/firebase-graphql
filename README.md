@@ -1,5 +1,5 @@
 # firebase-graphql
-This project answers the following questions. 
+This project answers the following questions. Only use apollo-server.
 
 - How are resolver, typedefs filed ?
 - How to use firestore with node.js?
