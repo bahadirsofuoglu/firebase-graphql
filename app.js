@@ -7,11 +7,11 @@ const path = require('path')
 const filePath = path.join(__dirname, 'schemas', 'typeDefs.gql')
 const typeDefs = fs.readFileSync(filePath, 'utf-8') */
 
-const schemas = require('./schemas')
+const typeDefs = require('./schemas')
 const resolvers = require('./resolvers')
 
 const server = new ApolloServer({
-  typeDefs: schemas,
+  typeDefs,
   resolvers,
   formatError: error => ({
     name: error.name,

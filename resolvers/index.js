@@ -1,8 +1,7 @@
 const task = require('./task')
 const workspace = require('./workspace')
-const { GraphQLDateTime } = require('graphql-iso-date')
+const { mergeResolvers } = require('@graphql-tools/merge')
 
-const customScalarResolver = {
-  Date: GraphQLDateTime
-}
-module.exports = { customScalarResolver, workspace, task }
+const resolvers = [task, workspace]
+
+module.exports = mergeResolvers(resolvers)

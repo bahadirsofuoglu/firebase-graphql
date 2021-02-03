@@ -1,6 +1,6 @@
 const { gql } = require('apollo-server')
 const workspace = gql`
-  extend type Workspace {
+  type Workspace {
     id: ID!
     name: String!
   }
@@ -14,4 +14,4 @@ const workspace = gql`
     deleteWorkspace(id: ID!): Boolean!
   }
 `
-module.exports = { workspace }
+module.exports = workspace
